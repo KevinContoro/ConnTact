@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+      <!-- <param name="parameter_ns" type="string" value="foo" /> -->
+      <rosparam command="load" file="$(find moveit_servo)/config/ur_simulated_config.yaml" />
+      <!-- override joint_group_position_controller/command specified in yaml to add namespace -->
+      <!-- <param name="$(arg namespace)/command_out_topic" value="/$(arg namespace)/joint_group_position_controller/command" /> -->
+      <param name="use_gazebo" value="false" />
+      <param name="ee_frame_name" value="wrist_3_link"   />
+      <param name="planning_frame" value="base_link"   />
+      <param name="robot_link_command_frame" value="base_link"   />
+      <param name="incoming_command_timeout" value="100" />
+    </node>
+
+</launch>
