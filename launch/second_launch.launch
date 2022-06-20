@@ -2,6 +2,7 @@
 
 <launch>
   
+  <!-- <node ns="robot1" name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" > -->
   <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
       <!-- <param name="parameter_ns" type="string" value="foo" /> -->
       <rosparam command="load" file="$(find moveit_servo)/config/ur_simulated_config.yaml" />

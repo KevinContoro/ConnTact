@@ -9,7 +9,7 @@
   <remap from="/wrench" to="/cartesian_compliance_controller/ft_sensor_wrench"/>
 
   <include file="$(find ur_robot_driver)/launch/ur10e_bringup.launch" >
-    <arg name="robot_ip" default="10.27.200.122" doc="SwRI Collaborative Lab's UR10e IP Address" />
+    <arg name="robot_ip" default="192.168.1.15" doc="SwRI Collaborative Lab's UR10e IP Address" />
     <arg name="headless_mode" default="true" doc="At SwRI Collaborative Lab, we do not use URCap, so headless_mode is required" />
 
     <!-- <arg name="controllers" default="joint_state_controller force_torque_sensor_controller cartesian_compliance_controller joint_group_position_controller" doc="Controllers that are activated by default."/> -->
